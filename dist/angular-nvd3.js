@@ -64,7 +64,7 @@
                         // Update chart layout (for example if container is resized)
                         update: function() {
                             if (scope.chart && scope.svg) {
-                                if (scope.options.chart.type === 'sunburstChart') {
+                                if (scope.options.chart.type === 'sunburstChart' || scope.options.chart.type === 'packedBubbleChart') {
                                     scope.svg.datum(angular.copy(scope.data)).call(scope.chart);
                                 } else {
                                     scope.svg.datum(scope.data).call(scope.chart);
